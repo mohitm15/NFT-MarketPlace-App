@@ -2,18 +2,20 @@ import { View, Text, Image } from 'react-native'
 import React from 'react'
 import { SIZES, FONTS, COLORS, SHADOWS, assets } from '../constants'
 
-export const NFTTitle = () => {
+export const NFTTitle = ({title, subTitle, titleSize, subTitleSize}) => {
   return (
-    <View>
-      <Text>NFTTitle</Text>
+    <View style={{}}>
+      <Text style={{fontFamily:FONTS.semiBold, color:COLORS.primary, fontSize:titleSize}}>{title}</Text>
+      <Text style={{ color:COLORS.primary, fontSize:subTitleSize}}>{subTitle}</Text>
     </View>
   )
 }
 
-export const ETHPrice = () => {
+export const ETHPrice = ({price}) => {
   return (
-    <View>
-      <Text>ETHPrice</Text>
+    <View style={{flexDirection:'row',alignItems:'center'}}>
+      <Image source={assets.eth} resizeMode="contain" style={{width:20, height:20, marginRight:2}} />
+      <Text style={{fontSize:SIZES.font, color:COLORS.primary, fontFamily:FONTS.medium}}>{price}</Text>
     </View>
   )
 }
@@ -36,7 +38,7 @@ export const People = () => {
 
 export const EndDate = () => {
   return (
-    <View style={{paddingHorizontal:SIZES.font, paddingVertical:SIZES.base, backgroundColor:COLORS.white, justifyContent:'center', alignItems:'center',...SHADOWS.light, elevation:1, maxWidth:'50%'}}>
+    <View style={{paddingHorizontal:SIZES.font, paddingVertical:SIZES.base, backgroundColor:COLORS.white, justifyContent:'center', alignItems:'center',...SHADOWS.light, elevation:1, maxWidth:'50%',borderColor:COLORS.gray,borderWidth:1}}>
       <Text style={{ fontSize:SIZES.small, color:COLORS.primary}}>Ending IN</Text>
       <Text style={{fontFamily:FONTS.semiBold, fontSize:SIZES.medium, color:COLORS.primary}}>11h 12min</Text>
     </View>
