@@ -7,7 +7,13 @@ import {
   FlatList,
   SafeAreaView,
 } from "react-native";
-import { DetailsBid, SubInfo, CircleButton, RectButton, DetailsDesc } from "../components";
+import {
+  DetailsBid,
+  SubInfo,
+  CircleButton,
+  RectButton,
+  DetailsDesc,
+} from "../components";
 import { COLORS, SIZES, SHADOWS, FONTS, assets } from "../constants";
 
 const DetailsHeader = ({ data, navigation }) => {
@@ -19,9 +25,18 @@ const DetailsHeader = ({ data, navigation }) => {
         resizeMode="cover"
       />
 
-      <CircleButton imgUrl={assets.left} handlePress={()=>navigation.goBack()} left={15} top={StatusBar.currentHeight+10}  />
+      <CircleButton
+        imgUrl={assets.left}
+        handlePress={() => navigation.goBack()}
+        left={15}
+        top={StatusBar.currentHeight + 10}
+      />
 
-      <CircleButton imgUrl={assets.heart}  right={15} top={StatusBar.currentHeight+10}  />
+      <CircleButton
+        imgUrl={assets.heart}
+        right={15}
+        top={StatusBar.currentHeight + 10}
+      />
     </View>
   );
 };
@@ -61,8 +76,19 @@ const Details = ({ route, navigation }) => {
           <Fragment>
             <DetailsHeader data={data} navigation={navigation} />
             <SubInfo />
-            <View style={{padding:SIZES.font}}>
+            <View style={{ padding: SIZES.font }}>
               <DetailsDesc data={data} />
+              {data.bids.length > 0 && (
+                <Text
+                  style={{
+                    fontFamily: FONTS.semiBold,
+                    fontSize: SIZES.font,
+                    color: COLORS.primary,
+                  }}
+                >
+                  Current Bid
+                </Text>
+              )}
             </View>
           </Fragment>
         )}

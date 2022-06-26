@@ -5,6 +5,9 @@ import { ETHPrice, NFTTitle } from "./SubInfo";
 import { COLORS, SIZES, FONTS } from "../constants";
 
 const DetailsDesc = ({ data }) => {
+  const [text, setText] = useState(data.description.slice(0, 100));
+  const [readmore, setReadmore] = useState(false);
+
   return (
     <Fragment>
       <View
@@ -39,10 +42,30 @@ const DetailsDesc = ({ data }) => {
             style={{
               fontSize: SIZES.small,
               color: COLORS.secondary,
-              lineHeight:SIZES.large
+              lineHeight: SIZES.large,
             }}
           >
-            {data.description }
+            {text}
+            {!readmore && "..."}
+            <Text
+              style={{
+                fontFamily: FONTS.semiBold,
+                fontSize: SIZES.font,
+                color: COLORS.primary,
+              }}
+              onPress={() => {
+                if (!readmore) {
+                  setText(data.description);
+                  setReadmore(true)
+                }
+                else {
+                    setText(data.description.slice(0,100));
+                  setReadmore(false)
+                }
+              }}
+            >
+              {readmore ? "Show Less" : "Show More"}
+            </Text>
           </Text>
         </View>
       </View>
