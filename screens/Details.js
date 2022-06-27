@@ -52,6 +52,8 @@ const Details = ({ route, navigation }) => {
         backgroundColor="transparent"
         translucent={true}
       />
+
+      {/* botton place a bid view */}
       <View
         style={{
           width: "100%",
@@ -59,13 +61,15 @@ const Details = ({ route, navigation }) => {
           paddingVertical: SIZES.font,
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "rgb(255,255,255,0.5)",
+          backgroundColor: "rgb(255,255,255,0.8)",
           zIndex: 1,
           position: "absolute",
         }}
       >
         <RectButton minWidth={170} fontSize={SIZES.large} {...SHADOWS.dark} />
       </View>
+
+
       <FlatList
         data={data.bids}
         renderItem={({ item }) => <DetailsBid bid={item} />}

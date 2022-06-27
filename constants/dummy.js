@@ -5,7 +5,7 @@ const NFTData = [
     id: "NFT-01",
     name: "Abstracto #312",
     creator: "Putri Intan",
-    price: 4.25,
+    price: 14.25,
     description:
       "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.",
     image: assets.nft01,
@@ -13,21 +13,21 @@ const NFTData = [
       {
         id: "BID-11",
         name: "Jessica Tan",
-        price: 4.25,
+        price: 14.25,
         image: assets.person02,
         date: "December 12, 2019 at 12:10 PM",
       },
       {
         id: "BID-12",
         name: "Jennifer Sia",
-        price: 4.5,
+        price: 14.51,
         image: assets.person03,
         date: "December 27, 2019 at 1:50 PM",
       },
       {
         id: "BID-13",
         name: "Rosie Wong",
-        price: 4.75,
+        price: 14.75,
         image: assets.person04,
         date: "December 31, 2019 at 3:50 PM",
       },
@@ -37,7 +37,7 @@ const NFTData = [
     id: "NFT-02",
     name: "Green Coins",
     creator: "Siti Nurhaliza",
-    price: 7.25,
+    price: 17.25,
     description:
       "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. Nulla sed velit erat vitae leo sem inceptos diam fames arcu hendrerit, quis ultrices in eleifend posuere ipsum conubia porttitor felis.",
     image: assets.nft02,
@@ -173,7 +173,7 @@ const NFTData = [
       {
         id: "BID-65",
         name: "Kaitlyn Lee",
-        price: 7.25,
+        price: 17.25,
         image: assets.person02,
         date: "December 31, 2019 at 3:50 PM",
       },

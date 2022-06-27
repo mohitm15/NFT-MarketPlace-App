@@ -11,8 +11,8 @@ const DetailsBid = ({ bid }) => {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginVertical:SIZES.base,
-        paddingHorizontal:SIZES.base*2,
+        marginVertical: SIZES.base,
+        paddingHorizontal: SIZES.base * 2,
       }}
     >
       <Image
